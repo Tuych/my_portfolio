@@ -10,6 +10,7 @@ class AboutMe(models.Model):
     phone_number = models.CharField(max_length=13, null=True, blank=True)
     email = models.EmailField(max_length=50, null=True, blank=True, unique=True)
     git_hub_url = models.URLField(null=True, blank=True)
+    leet_code_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.first_name
