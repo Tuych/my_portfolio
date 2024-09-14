@@ -35,8 +35,8 @@ class Migration(migrations.Migration):
                 ('client', models.CharField(default='Portfolio project', max_length=50)),
                 ('project_date', models.DateField(blank=True, null=True)),
                 ('project_url', models.URLField()),
-                ('image_title', models.ImageField(default='portfolio/title-default.png', upload_to='portfolio/')),
-                ('image_main', models.ImageField(default='portfolio/main-default.png', upload_to='portfolio/')),
+                ('image_title', models.ImageField(default='portfolio/title-default_project_img.png', upload_to='portfolio/')),
+                ('image_main', models.ImageField(default='portfolio/main-default_project_img.png', upload_to='portfolio/')),
             ],
         ),
         migrations.CreateModel(

@@ -32,8 +32,9 @@ class Projects(models.Model):
     client = models.CharField(max_length=50, default='Portfolio project')
     project_date = models.DateField(blank=True, null=True)
     project_url = models.URLField(blank=False, null=False)
-    image_title = models.ImageField(upload_to='portfolio/', default='portfolio/title-default.png')
-    image_main = models.ImageField(upload_to='portfolio/', default='portfolio/main-default.png')
+    image_title = models.ImageField(upload_to='portfolio/', default='portfolio/default_project_img.png')
+    image_main = models.ImageField(upload_to='portfolio/', default='portfolio/default_project_img.png')
+    created_date = models.DateField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
         return self.name
