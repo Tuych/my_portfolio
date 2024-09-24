@@ -177,7 +177,7 @@
             {% for project in projects %}
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="{{ project.image_title.url }}" class="img-fluid" alt="project img">
+                <img src="{{ project.image_title.url }}" class="img-fluid" alt="project img" style="height: 265px;">
                 <div class="portfolio-info">
                   <p><a href="{% url 'portfolio-detail' project.id %}">{{ project.name }}</a></p>
                   <a href="{% url 'portfolio-detail' project.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
