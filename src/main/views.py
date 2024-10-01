@@ -29,3 +29,7 @@ def portfolio_detail(request, pk):
         'project': project
     }
     return render(request, 'main/portfolio-details.html', context)
+
+
+def custom_404(request, exception):
+    return render(request, 'main/404.html', status=404)
