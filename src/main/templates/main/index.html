@@ -179,7 +179,7 @@
               <div class="portfolio-content h-100">
                 <img src="{{ project.image_title.url }}" class="img-fluid" alt="project img" style="height: 265px;">
                 <div class="portfolio-info">
-                  <p><a href="{% url 'portfolio-detail' project.id %}">{{ project.name }}</a></p>
+                  <p><a href="{% url 'portfolio-detail' project.id %}"><b>{{ project.name }}</b></a></p>
                   <a href="{% url 'portfolio-detail' project.id %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
