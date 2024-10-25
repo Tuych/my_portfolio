@@ -35,6 +35,7 @@ class Projects(models.Model):
     image_title = models.ImageField(upload_to='portfolio/', default='portfolio/default_project_img.png')
     image_main = models.ImageField(upload_to='portfolio/', default='portfolio/default_project_img.png')
     created_date = models.DateField(auto_now_add=True, null=True, blank=True)
+    view_portfolio_numbers = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name
