@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 
 class AboutMe(models.Model):
@@ -14,6 +15,12 @@ class AboutMe(models.Model):
 
     def __str__(self):
         return self.first_name
+
+    @staticmethod
+    def age():
+        today = date.today()
+        age = today.year - 2000
+        return age
 
 
 class Skills(models.Model):

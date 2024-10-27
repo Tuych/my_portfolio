@@ -1,6 +1,6 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
+{% load my_filters %}
 {% block content %}
 
   <main class="main">
@@ -46,8 +46,8 @@
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{ age }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{ info.phone_number }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>{{ info.age }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>{{ info.phone_number|phone_number_filter }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{ info.degree }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>LeetCode:</strong> <span><a href="{{info.leet_code_url }}" target="_blank">{{ info.leet_code_url|slice:'32' }}</a></span></li>
                 </ul>
@@ -374,7 +374,7 @@
 
 <!--    </section>&lt;!&ndash; /Testimonials Section &ndash;&gt;-->
 
-    <!-- Contact Section -->
+<!--     Contact Section-->
 <!--    <section id="contact" class="contact section">-->
 
 <!--      &lt;!&ndash; Section Title &ndash;&gt;-->

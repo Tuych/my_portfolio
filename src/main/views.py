@@ -11,15 +11,12 @@ def index(request):
 
     projects = Projects.objects.all()
 
-    today = date.today()
-    age = (today.year - 2000)
-
     context = {
         'info': my_info,
-        'age': age,
         'skills': skills,
-        'projects': projects
-        }
+        'projects': projects,
+        'navbar_section': True,
+    }
     return render(request, 'main/index.html', context)
 
 
